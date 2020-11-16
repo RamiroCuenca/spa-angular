@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-inverse bg-inverse">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" [routerLink]="['home']">
             <img src="assets/img/A-64.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">&nbsp; Comic Fantasy
         </a>
@@ -14,13 +14,13 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <!-- active - Sacamos el href="#"-->
-                <a class="nav-link" [routerLink]="['home']">Home</a>
+                <a class="nav-link" [routerLink]="['home']" routerLinkActive='active'>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
+                <a class="nav-link" [routerLink]="['heroes']" routerLinkActive='active'>Heroes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['about']">About</a>
+                <a class="nav-link" [routerLink]="['about']" routerLinkActive='active'>About</a>
             </li>
             <!--
             <li class="nav-item dropdown">
