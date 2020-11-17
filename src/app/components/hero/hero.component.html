@@ -1,1 +1,19 @@
-<p>hero works!</p>
+<div class="container animated fadeIn fast">
+    <h1>{{ hero.name }} <small>{{ hero.born }}</small></h1>
+</div>
+<hr>
+<div class="row animated fadeIn">
+    <div class="col-md-4">
+        <img [src]="hero.img" [alt]="hero.name" class="img-fluid">
+        <br><br>
+        <a [routerLink]="['heroes']" class="btn btn-outline-danger btn-block">Go back to heroes...</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ hero.name }}</h3>
+        <hr>
+        <p>{{ hero.bio }}</p>
+        <div>
+            <img src="" alt="">
+        </div>
+    </div>
+</div>
