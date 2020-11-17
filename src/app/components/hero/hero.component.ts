@@ -14,6 +14,7 @@ import { HeroesService } from '../../services/heroes.service';
 export class HeroComponent implements OnInit {
 
   hero: any = {};
+  home = 'Marvel';
 
   constructor(
     private activatedRoute: ActivatedRoute,
