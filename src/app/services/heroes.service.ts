@@ -67,6 +67,26 @@ export class HeroesService {
     getHero( idx: string){
       return this.heroes[idx];
     }
+
+    searchHeroes( record: string ): Hero[]
+    {
+      const heroesArr: Hero[] = [];
+
+      record = record.toLowerCase();
+
+      for ( let hero of this.heroes )
+      {
+        let name = hero.name.toLowerCase();
+        if ( name.indexOf(record) >= 0 ) 
+        // Check if the param it's contained in the hero's name
+        // If it's true, returns 0 or 1 ; If it's false, returns -1
+        {
+          heroesArr.push( hero );
+        }
+      }
+
+      return heroesArr;
+    }
 }
 
 export interface Hero {
