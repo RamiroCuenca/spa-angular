@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 // Services
-import { HeroesService } from '../../services/heroes.service';
+import { Hero, HeroesService } from '../../services/heroes.service';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { HeroesService } from '../../services/heroes.service';
 })
 export class SearcherComponent implements OnInit {
 
-  heroesArr: [];
+  heroesArr: Hero[] = [];
   term: string;
 
   constructor(
@@ -26,9 +26,10 @@ export class SearcherComponent implements OnInit {
       {
         this.heroesArr = [];
         this.term = params['record'];
-        console.log( params['record'] );
+        // console.log( params['record'] );
 
-        for ( let hero of this.heroesService.searchHeroes( params['record']))
+        // for ( let hero of this.heroesService.searchHeroes( params['record']))
+        for ( const hero of this.heroesService.searchHeroes( this.term ))
         {
           this.heroesArr.push(hero);
         }

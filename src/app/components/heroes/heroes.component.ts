@@ -26,8 +26,8 @@ export class HeroesComponent implements OnInit {
     this.heroes = this._heroesService.getHeroes();
   }
 
-  watchHero( idx: number) {
-    this.router.navigate( [ 'hero', idx]);
-  }
+  // watchHero( idx: number) {
+  //   this.router.navigate( [ 'hero', idx]);
+  // }
 
 }
